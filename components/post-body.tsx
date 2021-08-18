@@ -1,8 +1,9 @@
-import markdownStyles from './markdown-styles.module.css'
+import React from 'react';
+import markdownStyles from './markdown-styles.module.css';
 
 type Props = {
-  content: string
-}
+  content: string;
+};
 
 const PostBody = ({ content }: Props) => {
   return (
@@ -12,7 +13,7 @@ const PostBody = ({ content }: Props) => {
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default PostBody
+export default PostBody;
