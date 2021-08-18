@@ -1,10 +1,15 @@
 module.exports = {
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     browser: true,
     es2021: true,
   },
   extends: [
-    'next',
+    'plugin:@next/next/recommended',
     'plugin:react/recommended',
     'google',
     'plugin:prettier/recommended',
