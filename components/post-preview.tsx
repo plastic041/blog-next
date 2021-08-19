@@ -1,5 +1,3 @@
-import Author from '../types/author';
-import Avatar from './avatar';
 import CoverImage from './cover-image';
 import DateFormatter from './date-formatter';
 import Link from 'next/link';
@@ -10,18 +8,10 @@ type Props = {
   coverImage?: string;
   date: string;
   excerpt: string;
-  author: Author;
   slug: string;
 };
 
-const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
     <div className="lg:flex md:flex-row">
       <div>
