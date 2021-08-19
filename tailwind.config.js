@@ -13,6 +13,10 @@ module.exports = {
                 display: 'none',
               },
             },
+            '*': {
+              'word-break': 'keep-all',
+              'overflow-wrap': 'break-word',
+            },
           },
         },
       },
