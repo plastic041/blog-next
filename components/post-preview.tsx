@@ -13,27 +13,22 @@ type Props = {
 
 const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
-    <div className="lg:flex md:flex-row">
-      <div>
+    <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
+      <a className="w-full lg:h-40 post-item lg:flex md:flex-row items-center mx-auto transition duration-100 shadow hover:shadow-lg rounded p-2 overflow-hidden">
         <CoverImage
-          className="md:mr-8 lg:w-64"
-          slug={slug}
+          className="hidden md:block w-full lg:w-2/5 lg:block lg:mr-2"
           title={title}
           src={coverImage || '/assets/blog/preview/cover.jpg'}
         />
-      </div>
-      <div className="flex flex-col">
-        <h3 className="text-2xl mb-1 leading-snug">
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a className="hover:underline">{title}</a>
-          </Link>
-        </h3>
-        <div className="text-sm mb-4">
-          <DateFormatter dateString={date} />
+        <div className="lg:w-3/5 flex flex-col justify-center overflow-hidden">
+          <h3 className="text-2xl mb-1 ">{title}</h3>
+          <div className="text-sm mb-2">
+            <DateFormatter dateString={date} />
+          </div>
+          <p className="text-base truncate">{excerpt}</p>
         </div>
-        <p className="text-base">{excerpt}</p>
-      </div>
-    </div>
+      </a>
+    </Link>
   );
 };
 

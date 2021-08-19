@@ -1,5 +1,5 @@
 ---
-title: 'Aseprite 빌드하기'
+title: 'Aseprite 빌드해서-써보기'
 excerpt: '오픈소스 프로그램인 Aseprite를 직접 빌드해서 쓰기'
 date: '2021-08-16T05:35:07.322Z'
 ---

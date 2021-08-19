@@ -1,14 +1,12 @@
 import { BLOG_NAME } from '../lib/constants';
 import Container from '../components/container';
 import Head from 'next/head';
-import HeroPost from '../components/hero-post';
-import Intro from '../components/intro';
+import Header from '../components/header';
 import Layout from '../components/layout';
 import MoreStories from '../components/more-stories';
 import Post from '../types/post';
 import React from 'react';
 import { getAllPosts } from '../lib/api';
-import Header from '../components/header';
 
 type Props = {
   allPosts: Post[];

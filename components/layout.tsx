@@ -10,7 +10,7 @@ const Layout = ({ preview, children }: Props) => {
   return (
     <>
       <Meta />
-      <div className="">
+      <div>
         <main>{children}</main>
       </div>
     </>
