@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <h2 className="text-4xl md:text-6xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-4">
+    <h2 className="mt-4 mb-20 text-4xl font-bold leading-tight tracking-tight md:text-6xl md:tracking-tighter">
       <Link href="/">
         <a className="hover:underline">스넙</a>
       </Link>

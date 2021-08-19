@@ -4,19 +4,18 @@ import React from 'react';
 
 type Props = {
   title: string;
-  coverImage?: string;
   date: string;
   excerpt: string;
   slug: string;
 };
 
-const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
+const PostPreview = ({ title, date, excerpt, slug }: Props) => {
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]" passHref>
-      <a className="w-full h-36 post-item flex items-center mx-auto transition duration-100 shadow hover:shadow-lg rounded-md py-2 px-4 overflow-hidden">
+      <a className="flex items-center w-full px-4 py-2 mx-auto overflow-hidden transition duration-100 rounded-md shadow h-36 post-item hover:shadow-lg">
         <div className="flex flex-col justify-center">
-          <h3 className="text-2xl mb-1">{title}</h3>
-          <div className="text-sm mb-2">
+          <h3 className="mb-1 text-2xl">{title}</h3>
+          <div className="mb-2 text-sm">
             <DateFormatter dateString={date} />
           </div>
           <p className="text-base">{excerpt}</p>
