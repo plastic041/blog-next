@@ -7,7 +7,7 @@ import React from 'react';
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImage?: string;
   date: string;
   excerpt: string;
   author: Author;
@@ -29,7 +29,7 @@ const PostPreview = ({
           className="md:mr-8 lg:w-64"
           slug={slug}
           title={title}
-          src={coverImage}
+          src={coverImage || '/assets/blog/preview/cover.jpg'}
         />
       </div>
       <div className="flex flex-col">

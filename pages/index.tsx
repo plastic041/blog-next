@@ -8,6 +8,7 @@ import MoreStories from '../components/more-stories';
 import Post from '../types/post';
 import React from 'react';
 import { getAllPosts } from '../lib/api';
+import Header from '../components/header';
 
 type Props = {
   allPosts: Post[];
@@ -21,7 +22,7 @@ const Index = ({ allPosts }: Props) => {
           <title>{BLOG_NAME}</title>
         </Head>
         <Container>
-          <Intro />
+          <Header />
           <MoreStories posts={allPosts} />
         </Container>
       </Layout>
