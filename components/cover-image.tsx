@@ -13,7 +13,7 @@ const CoverImage = ({ title, src, slug, className }: Props) => {
   const image = (
     <img
       src={src}
-      alt={`Cover Image for ${title}`}
+      alt={`${title} 글의 대표 이미지`}
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}

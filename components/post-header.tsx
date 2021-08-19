@@ -7,7 +7,7 @@ import React from 'react';
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImage?: string;
   date: string;
   author: Author;
 };
@@ -24,7 +24,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
         </div>
       </div>
       <div className="mb-4 md:mb-8">
-        <CoverImage title={title} src={coverImage} />
+        {coverImage && <CoverImage title={title} src={coverImage} />}
       </div>
     </div>
   );

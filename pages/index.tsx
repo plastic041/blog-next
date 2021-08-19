@@ -1,4 +1,4 @@
-import { CMS_NAME } from '../lib/constants';
+import { BLOG_NAME } from '../lib/constants';
 import Container from '../components/container';
 import Head from 'next/head';
 import HeroPost from '../components/hero-post';
@@ -18,7 +18,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>{BLOG_NAME}</title>
         </Head>
         <Container>
           <Intro />

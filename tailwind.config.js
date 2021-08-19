@@ -2,6 +2,20 @@ module.exports = {
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            code: {
+              '&:before': {
+                display: 'none',
+              },
+              '&:after': {
+                display: 'none',
+              },
+            },
+          },
+        },
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
@@ -30,4 +44,5 @@ module.exports = {
       },
     },
   },
+  plugins: [require('@tailwindcss/typography')],
 };

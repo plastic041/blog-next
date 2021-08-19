@@ -1,6 +1,6 @@
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 
-import { CMS_NAME } from '../../lib/constants';
+import { BLOG_NAME } from '../../lib/constants';
 import Container from '../../components/container';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
@@ -37,9 +37,11 @@ const Post = ({ post, morePosts, preview }: Props) => {
             <article className="mb-32">
               <Head>
                 <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
+                  {post.title} | {BLOG_NAME}
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                {post.ogImage && (
+                  <meta property="og:image" content={post.ogImage.url} />
+                )}
               </Head>
               <PostHeader
                 title={post.title}

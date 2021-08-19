@@ -1,10 +1,7 @@
 ---
 title: 'Aseprite 빌드하기'
 excerpt: '오픈소스 프로그램인 Aseprite를 직접 빌드해서 쓰기'
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
-ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+date: '2021-08-16T05:35:07.322Z'
 ---
 
 참고 링크: [https://github.com/aseprite/aseprite/blob/main/INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md)

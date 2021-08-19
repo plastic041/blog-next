@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.0",
+    "@tailwindcss/typography": "^0.4.1",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.0",
     "@types/react": "^17.0.6",
