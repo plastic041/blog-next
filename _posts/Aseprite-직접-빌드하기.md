@@ -23,7 +23,7 @@ date: '2021-08-16T14:35:00.000Z'
    3. [ninja](https://ninja-build.org) 설치 (3.14버전 이상)
 
    4. [skia 라이브러리](https://github.com/aseprite/skia/releases/) 다운로드. 직접 빌드할 필요는 없고, Aseprite 제작자가 미리 빌드해놓았으니 다운로드만 받으면 됩니다.
-   
+
    5. [비주얼 스튜디오 커뮤니티 2019](https://visualstudio.microsoft.com/vs/community/) 설치
 
    6. Visual Studio Community 2019 Installer에서 **C++을 사용한 데스크톱 개발**을 설치([https://imgur.com/a/7zs51IT](https://imgur.com/a/7zs51IT))
