@@ -1,7 +1,8 @@
 ---
 title: 'Aseprite 직접 빌드하기'
 excerpt: '오픈소스 프로그램인 Aseprite를 직접 빌드하는 방법'
-date: '2021-08-16T14:35:00.000Z'
+date: '2021-08-16T14:00:00.000Z'
+modifiedDate: '2021-08-20T14:00:00.000Z'
 ---
 
 참조 링크: [https://github.com/aseprite/aseprite/blob/main/INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md)
