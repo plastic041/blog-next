@@ -66,11 +66,8 @@ type Params = {
   };
 };
 
-/**
- * @params {Params} {params} params from router
- */
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+export async function getStaticProps(context: Params) {
+  const post = getPostBySlug(context.params.slug, [
     'title',
     'date',
     'modifiedDate',
