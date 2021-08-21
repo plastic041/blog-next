@@ -10,7 +10,7 @@ type Props = {
   excerpt: string;
   coverImage?: string;
   date: string;
-  modifiedDate: string;
+  modifiedDate?: string;
 };
 
 const PostHeader = (post: Props) => {
@@ -28,10 +28,12 @@ const PostHeader = (post: Props) => {
             {'작성: '}
             <DateFormatter dateString={post.date} />
           </div>
-          <div>
-            {'수정: '}
-            <DateFormatter dateString={post.modifiedDate} />
-          </div>
+          {post.modifiedDate && (
+            <div>
+              {'수정: '}
+              <DateFormatter dateString={post.modifiedDate} />
+            </div>
+          )}
         </div>
       </div>
       <Separator />

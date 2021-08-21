@@ -2,9 +2,9 @@ type PostType = {
   slug: string;
   title: string;
   date: string;
-  modifiedDate: string;
-  coverImage?: string;
+  modifiedDate?: string;
   excerpt: string;
+  coverImage?: string;
   ogImage?: {
     url: string;
   };

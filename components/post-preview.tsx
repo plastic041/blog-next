@@ -5,9 +5,9 @@ import React from 'react';
 type Props = {
   title: string;
   date: string;
-  modifiedDate: string;
-  excerpt: string;
+  modifiedDate?: string;
   slug: string;
+  excerpt: string;
 };
 
 const PostPreview = (post: Props) => {
@@ -21,10 +21,12 @@ const PostPreview = (post: Props) => {
               {'작성: '}
               <DateFormatter dateString={post.date} />
             </span>
-            <span>
-              {'수정: '}
-              <DateFormatter dateString={post.modifiedDate} />
-            </span>
+            {post.modifiedDate && (
+              <span>
+                {'수정: '}
+                <DateFormatter dateString={post.modifiedDate} />
+              </span>
+            )}
           </div>
           <p className="text-base">{post.excerpt}</p>
         </div>
