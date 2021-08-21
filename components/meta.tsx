@@ -33,8 +33,10 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content={'스넙 블로그'} />
+      <meta name="description" content="스넙 블로그" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:title" content="스넙 블로그" />
+      <meta property="og:description" content="스넙 블로그" />
     </Head>
   );
 };
