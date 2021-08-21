@@ -13,3 +13,10 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+@layer components {
+  .keep-all {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}

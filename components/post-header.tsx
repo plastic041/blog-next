@@ -14,7 +14,7 @@ const PostHeader = (post: Props) => {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-16">
-        <div className="mx-auto">
+        <div className="mx-auto keep-all">
           <PostTitle>{post.title}</PostTitle>
         </div>
         <div className="text-sm text-right md:text-left">
