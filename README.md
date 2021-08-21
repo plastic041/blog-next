@@ -10,8 +10,8 @@ Next.js의 [blog-starter](https://github.com/vercel/next.js/tree/canary/examples
 
 ## TODO:
 
-- [ ] Slug 생성 방법 바꾸기. 파일이름 -> `/_posts/*.md`의 파일명 ([#1](https://github.com/plastic041/blog-next/issues/1))
+- [x] 마지막 수정일 표시 ([#2](https://github.com/plastic041/blog-next/issues/2))
 
 - [x] 글 작성일 파싱 방법 변경 ([#3](https://github.com/plastic041/blog-next/issues/3))
 
-- [x] 마지막 수정일 표시 ([#2](https://github.com/plastic041/blog-next/issues/2))
+- [ ] Slug 생성 방법 바꾸기. 파일이름 -> `/_posts/*.md`의 파일명 ([#1](https://github.com/plastic041/blog-next/issues/1))
