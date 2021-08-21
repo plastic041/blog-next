@@ -24,6 +24,7 @@ export function getPostBySlug(slug: string, fields: string[] = []): Items {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileBirthtime = fs.statSync(fullPath).birthtime;
   const { data, content } = matter(fileContents);
 
   const items: Items = {};
@@ -36,7 +37,9 @@ export function getPostBySlug(slug: string, fields: string[] = []): Items {
     if (field === 'content') {
       items[field] = content;
     }
-
+    if (field === 'date') {
+      items[field] = fileBirthtime.toISOString();
+    }
     if (data[field]) {
       items[field] = data[field];
     }
