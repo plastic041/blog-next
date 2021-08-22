@@ -43,7 +43,7 @@ const Post = ({ post }: Props) => {
                   <meta property="og:image" content={post.ogImage.url} />
                 )}
               </Head>
-              <div className="mx-auto md:w-max">
+              <div className="mx-auto md:max-w-2xl">
                 <div className="p-4 mb-2 bg-white">
                   <PostHeader
                     title={post.title}

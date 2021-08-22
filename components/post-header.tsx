@@ -16,7 +16,7 @@ type Props = {
 const PostHeader = (post: Props) => {
   return (
     <div>
-      <div className="mb-4 keep-all">
+      <div className="w-full mb-4 keep-all">
         <div className="mb-2">
           <PostTitle title={post.title} />
         </div>

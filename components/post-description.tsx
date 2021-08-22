@@ -6,9 +6,7 @@ type Props = {
 
 const PostExcerpt = ({ description: excerpt }: Props) => {
   return (
-    <h1 className="text-lg tracking-tighter text-center md:text-xl md:text-left">
-      {excerpt}
-    </h1>
+    <h1 className="text-lg text-center md:text-xl md:text-left">{excerpt}</h1>
   );
 };
 
