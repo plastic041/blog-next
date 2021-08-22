@@ -44,6 +44,11 @@ const Meta = (prop: Props) => {
       <meta property="og:title" content={BLOG_NAME} />
       <meta name="description" content={description} />
       <meta property="og:description" content={description} />
+      <script
+        defer
+        data-domain="snubi.netlify.app"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
     </Head>
   );
 };
