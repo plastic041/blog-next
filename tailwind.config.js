@@ -12,6 +12,8 @@ module.exports = {
               '&:after': {
                 display: 'none',
               },
+              backgroundColor: '#e5e7eb',
+              padding: '0.2em 0.4em',
             },
             '*': {
               'word-break': 'keep-all',
@@ -19,13 +21,6 @@ module.exports = {
             },
           },
         },
-      },
-      colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
       },
       spacing: {
         28: '7rem',
