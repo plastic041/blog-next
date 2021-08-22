@@ -26,7 +26,7 @@ const Post = ({ post }: Props) => {
   }
 
   return (
-    <Layout description={post.title}>
+    <Layout title={post.title} description={post.description}>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -42,14 +42,16 @@ const Post = ({ post }: Props) => {
                   <meta property="og:image" content={post.ogImage.url} />
                 )}
               </Head>
-              <PostHeader
-                title={post.title}
-                excerpt={post.excerpt}
-                coverImage={post.coverImage}
-                date={post.date}
-                modifiedDate={post.modifiedDate}
-              />
-              <PostBody content={post.content} />
+              <div className="p-4 mx-auto bg-white md:w-max">
+                <PostHeader
+                  title={post.title}
+                  description={post.description}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  modifiedDate={post.modifiedDate}
+                />
+                <PostBody content={post.content} />
+              </div>
             </article>
           </>
         )}
@@ -69,7 +71,7 @@ type Params = {
 export async function getStaticProps(context: Params) {
   const post = getPostBySlug(context.params.slug, [
     'title',
-    'excerpt',
+    'description',
     'date',
     'modifiedDate',
     'slug',

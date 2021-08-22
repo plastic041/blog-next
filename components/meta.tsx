@@ -4,10 +4,12 @@ import Head from 'next/head';
 import React from 'react';
 
 type Props = {
+  title?: string;
   description?: string;
 };
 
 const Meta = (prop: Props) => {
+  const title = prop.title ? `${prop.title} | ${BLOG_NAME}` : BLOG_NAME;
   const description = prop.description || '스넙 블로그';
 
   return (
@@ -36,21 +38,17 @@ const Meta = (prop: Props) => {
         color="#000000"
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={HOME_OG_IMAGE} />
       <meta property="og:url" content="https://snubi.netlify.app" />
-      <meta property="og:title" content={BLOG_NAME} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:locale" content="ko_KR" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@plastik041" />
       <meta name="twitter:creator:id" content="@plastik041" />
-      <meta name="twitter:title" content={BLOG_NAME} />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={HOME_OG_IMAGE} />
     </Head>

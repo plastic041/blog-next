@@ -1,13 +1,13 @@
 import CoverImage from './cover-image';
 import DateFormatter from './date-formatter';
-import PostExcerpt from './post-excerpt';
+import PostDescription from './post-description';
 import PostTitle from './post-title';
 import React from 'react';
 import Separator from './section-separator';
 
 type Props = {
   title: string;
-  excerpt: string;
+  description: string;
   coverImage?: string;
   date: string;
   modifiedDate?: string;
@@ -15,13 +15,13 @@ type Props = {
 
 const PostHeader = (post: Props) => {
   return (
-    <div className="max-w-2xl mx-auto">
+    <div>
       <div className="mb-4 keep-all">
         <div className="mb-2">
           <PostTitle title={post.title} />
         </div>
         <div className="mb-4">
-          <PostExcerpt excerpt={post.excerpt} />
+          <PostDescription description={post.description} />
         </div>
         <div className="text-sm text-right md:text-left">
           <div>

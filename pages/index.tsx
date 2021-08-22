@@ -3,8 +3,8 @@ import Container from '../components/container';
 import Head from 'next/head';
 import Header from '../components/header';
 import Layout from '../components/layout';
-import MoreStories from '../components/more-stories';
 import Post from '../types/post';
+import PostList from '../components/post-list';
 import React from 'react';
 import { getAllPosts } from '../lib/api';
 
@@ -21,7 +21,7 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Header />
-          <MoreStories posts={allPosts} />
+          <PostList posts={allPosts} />
         </Container>
       </Layout>
     </>
@@ -38,7 +38,7 @@ export const getStaticProps = async () => {
     'slug',
     'author',
     'coverImage',
-    'excerpt',
+    'description',
   ]);
 
   return {

@@ -3,7 +3,7 @@ type PostType = {
   title: string;
   date: string;
   modifiedDate?: string;
-  excerpt: string;
+  description: string;
   coverImage?: string;
   ogImage?: {
     url: string;

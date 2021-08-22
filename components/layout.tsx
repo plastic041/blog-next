@@ -2,6 +2,7 @@ import Meta from './meta';
 import React from 'react';
 
 type Props = {
+  title?: string;
   description?: string;
   children: React.ReactNode;
 };

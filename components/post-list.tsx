@@ -6,10 +6,10 @@ type Props = {
   posts: Post[];
 };
 
-const MoreStories = ({ posts }: Props) => {
+const PostList = ({ posts }: Props) => {
   return (
     <section>
-      <div className="grid px-0 mb-32 gap-y-8 md:gap-y-16 md:px-8 lg:px-32 xl:px-64 2xl:px-96">
+      <div className="grid px-0 mb-32 gap-y-8 md:gap-y-8 md:px-8 lg:px-32 xl:px-64 2xl:px-96">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -17,7 +17,7 @@ const MoreStories = ({ posts }: Props) => {
             date={post.date}
             modifiedDate={post.modifiedDate}
             slug={post.slug}
-            excerpt={post.excerpt}
+            description={post.description}
           />
         ))}
       </div>
@@ -25,4 +25,4 @@ const MoreStories = ({ posts }: Props) => {
   );
 };
 
-export default MoreStories;
+export default PostList;

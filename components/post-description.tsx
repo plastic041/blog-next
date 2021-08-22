@@ -1,10 +1,10 @@
 import React from 'react';
 
 type Props = {
-  excerpt: string;
+  description: string;
 };
 
-const PostExcerpt = ({ excerpt }: Props) => {
+const PostExcerpt = ({ description: excerpt }: Props) => {
   return (
     <h1 className="text-lg tracking-tighter text-center md:text-xl md:text-left">
       {excerpt}

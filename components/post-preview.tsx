@@ -7,13 +7,13 @@ type Props = {
   date: string;
   modifiedDate?: string;
   slug: string;
-  excerpt: string;
+  description?: string;
 };
 
 const PostPreview = (post: Props) => {
   return (
-    <Link as={`/posts/${post.slug}`} href="/posts/[slug]" passHref>
-      <a className="flex items-center w-full px-4 py-2 mx-auto overflow-hidden transition duration-100 rounded-md shadow h-36 post-item hover:shadow-lg">
+    <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+      <a className="flex items-center w-full px-4 py-2 mx-auto overflow-hidden transition duration-100 bg-white rounded-md shadow-md h-28 post-item hover:shadow-lg">
         <div className="flex flex-col justify-center">
           <h3 className="mb-1 text-2xl">{post.title}</h3>
           <div className="mb-2 text-sm">
@@ -28,7 +28,7 @@ const PostPreview = (post: Props) => {
               </span>
             )}
           </div>
-          <p className="text-base">{post.excerpt}</p>
+          <p className="text-base">{post.description}</p>
         </div>
       </a>
     </Link>
