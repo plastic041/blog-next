@@ -1,8 +1,15 @@
-import { HOME_OG_IMAGE_URL } from '../lib/constants';
+import { BLOG_NAME, HOME_OG_IMAGE } from '../lib/constants';
+
 import Head from 'next/head';
 import React from 'react';
 
-const Meta = () => {
+type Props = {
+  description?: string;
+};
+
+const Meta = (prop: Props) => {
+  const description = prop.description || '스넙 블로그';
+
   return (
     <Head>
       <link
@@ -33,10 +40,10 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content="스넙 블로그" />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
-      <meta property="og:title" content="스넙 블로그" />
-      <meta property="og:description" content="스넙 블로그" />
+      <meta property="og:image" content={HOME_OG_IMAGE} />
+      <meta property="og:title" content={BLOG_NAME} />
+      <meta name="description" content={description} />
+      <meta property="og:description" content={description} />
     </Head>
   );
 };

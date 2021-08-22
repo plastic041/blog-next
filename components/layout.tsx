@@ -2,16 +2,16 @@ import Meta from './meta';
 import React from 'react';
 
 type Props = {
-  preview?: boolean;
+  description?: string;
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => {
+const Layout = (prop: Props) => {
   return (
     <>
-      <Meta />
+      <Meta description={prop.description} />
       <div>
-        <main>{children}</main>
+        <main>{prop.children}</main>
       </div>
     </>
   );
