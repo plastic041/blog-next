@@ -13,6 +13,7 @@ import PostType from '../../types/post';
 import React from 'react';
 import markdownToHtml from '../../lib/markdownToHtml';
 import { useRouter } from 'next/router';
+import GoPostList from '../../components/go-post-list';
 
 type Props = {
   post: PostType;
@@ -42,15 +43,18 @@ const Post = ({ post }: Props) => {
                   <meta property="og:image" content={post.ogImage.url} />
                 )}
               </Head>
-              <div className="p-4 mx-auto bg-white md:w-max">
-                <PostHeader
-                  title={post.title}
-                  description={post.description}
-                  coverImage={post.coverImage}
-                  date={post.date}
-                  modifiedDate={post.modifiedDate}
-                />
-                <PostBody content={post.content} />
+              <div className="mx-auto md:w-max">
+                <div className="p-4 mb-2 bg-white">
+                  <PostHeader
+                    title={post.title}
+                    description={post.description}
+                    coverImage={post.coverImage}
+                    date={post.date}
+                    modifiedDate={post.modifiedDate}
+                  />
+                  <PostBody content={post.content} />
+                </div>
+                <GoPostList />
               </div>
             </article>
           </>
