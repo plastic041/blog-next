@@ -40,10 +40,19 @@ const Meta = (prop: Props) => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta property="og:image" content={HOME_OG_IMAGE} />
-      <meta property="og:title" content={BLOG_NAME} />
       <meta name="description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content={HOME_OG_IMAGE} />
+      <meta property="og:url" content="https://snubi.netlify.app" />
+      <meta property="og:title" content={BLOG_NAME} />
       <meta property="og:description" content={description} />
+      <meta property="og:locale" content="ko_KR" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@plastik041" />
+      <meta name="twitter:creator:id" content="@plastik041" />
+      <meta name="twitter:title" content={BLOG_NAME} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={HOME_OG_IMAGE} />
     </Head>
   );
 };
