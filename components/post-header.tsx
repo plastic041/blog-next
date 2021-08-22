@@ -15,7 +15,7 @@ type Props = {
 
 const PostHeader = (post: Props) => {
   return (
-    <div>
+    <>
       <div className="w-full mb-4 keep-all">
         <div className="mb-2">
           <PostTitle title={post.title} />
@@ -42,7 +42,7 @@ const PostHeader = (post: Props) => {
           <CoverImage title={post.title} src={post.coverImage} />
         )}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -44,7 +44,7 @@ const Post = ({ post }: Props) => {
                 )}
               </Head>
               <div className="mx-auto md:max-w-2xl">
-                <div className="p-4 mb-2 bg-white">
+                <div className="p-4 mb-2 bg-white ">
                   <PostHeader
                     title={post.title}
                     description={post.description}

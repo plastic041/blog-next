@@ -19,6 +19,7 @@ module.exports = {
               'word-break': 'keep-all',
               'overflow-wrap': 'break-word',
             },
+            maxWidth: null,
           },
         },
       },

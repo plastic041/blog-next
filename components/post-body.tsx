@@ -6,9 +6,10 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="w-full prose prose-blue">
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </div>
+    <div
+      className="prose prose-blue"
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   );
 };
 
