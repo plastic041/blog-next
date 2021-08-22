@@ -9,4 +9,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <PlausibleProvider domain="snubi.netlify.app">
       <Component {...pageProps} />
     </PlausibleProvider>
+  );
 }
