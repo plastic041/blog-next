@@ -4,11 +4,9 @@ import React from 'react';
 type Props = {
   title: string;
   src: string;
-  slug?: string;
-  className?: string;
 };
 
-const CoverImage = ({ title, src, slug, className }: Props) => {
+const CoverImage = ({ title, src }: Props) => {
   return (
     <Image
       width={1200}
@@ -16,7 +14,6 @@ const CoverImage = ({ title, src, slug, className }: Props) => {
       layout="responsive"
       src={src}
       alt={`${title} 글의 대표 이미지`}
-      className={`object-cover ${className}`}
     />
   );
 };
