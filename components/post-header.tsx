@@ -4,6 +4,7 @@ import PostDescription from './post-description';
 import PostTitle from './post-title';
 import React from 'react';
 import Separator from './section-separator';
+import GoPostList from './go-post-list';
 
 type Props = {
   title: string;
@@ -15,7 +16,10 @@ type Props = {
 
 const PostHeader = (post: Props) => {
   return (
-    <>
+    <div className="relative">
+      <div className="absolute -top-12">
+        <GoPostList />
+      </div>
       <div className="w-full mb-4 keep-all">
         <div className="mb-2">
           <PostTitle title={post.title} />
@@ -42,7 +46,7 @@ const PostHeader = (post: Props) => {
           <CoverImage title={post.title} src={post.coverImage} />
         )}
       </div>
-    </>
+    </div>
   );
 };
 
