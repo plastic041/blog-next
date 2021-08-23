@@ -47,3 +47,20 @@
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
 */
+
+.markdown * {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.markdown code {
+  @apply bg-gray-200 py-0.5 px-1;
+}
+
+.markdown code::before {
+  @apply hidden;
+}
+
+.markdown code::after {
+  @apply hidden;
+}

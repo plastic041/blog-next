@@ -5,20 +5,6 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            code: {
-              '&:before': {
-                display: 'none',
-              },
-              '&:after': {
-                display: 'none',
-              },
-              backgroundColor: '#e5e7eb',
-              padding: '0.2em 0.4em',
-            },
-            '*': {
-              'word-break': 'keep-all',
-              'overflow-wrap': 'break-word',
-            },
             maxWidth: null,
           },
         },
