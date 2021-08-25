@@ -8,13 +8,16 @@ type Props = {
 
 const CoverImage = ({ title, src }: Props) => {
   return (
-    <Image
-      width={1200}
-      height={Math.floor((9 / 16) * 1200)}
-      layout="responsive"
-      src={src}
-      alt={`${title} 글의 대표 이미지`}
-    />
+    <div className="relative h-40 md:h-96 mx-auto">
+      <a href={src} target="_blank">
+        <Image
+          layout="fill"
+          src={src}
+          objectFit="contain"
+          alt={`${title} 글의 대표 이미지`}
+        />
+      </a>
+    </div>
   );
 };
 
