@@ -64,3 +64,11 @@
 .markdown code::after {
   @apply hidden;
 }
+
+.markdown ol > li {
+  @apply pl-4;
+}
+
+.markdown li p {
+  @apply my-0;
+}
