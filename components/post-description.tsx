@@ -4,10 +4,8 @@ type Props = {
   description: string;
 };
 
-const PostExcerpt = ({ description: excerpt }: Props) => {
-  return (
-    <h1 className="text-lg text-center md:text-xl md:text-left">{excerpt}</h1>
-  );
+const PostExcerpt = ({ description}: Props) => {
+  return <h1 className="text-lg">{description}</h1>;
 };
 
 export default PostExcerpt;
