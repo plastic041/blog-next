@@ -5,7 +5,7 @@ const GoPostList = () => {
   return (
     <>
       <Link as={'/'} href="/" passHref>
-        <a className="block text-right underline mr-4">글 목록으로 돌아가기</a>
+        <a className="block mr-4 text-right underline">글 목록으로 돌아가기</a>
       </Link>
     </>
   );

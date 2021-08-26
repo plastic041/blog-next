@@ -1,10 +1,10 @@
 import CoverImage from './cover-image';
 import DateFormatter from './date-formatter';
+import GoPostList from './go-post-list';
 import PostDescription from './post-description';
 import PostTitle from './post-title';
 import React from 'react';
 import Separator from './section-separator';
-import GoPostList from './go-post-list';
 
 type Props = {
   title: string;

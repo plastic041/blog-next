@@ -8,8 +8,8 @@ type Props = {
 
 const CoverImage = ({ title, src }: Props) => {
   return (
-    <div className="relative h-40 md:h-96 mx-auto">
-      <a href={src} target="_blank">
+    <div className="relative h-40 mx-auto md:h-96">
+      <a href={src} target="_blank" rel="noreferrer">
         <Image
           layout="fill"
           src={src}
