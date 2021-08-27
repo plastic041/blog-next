@@ -14,10 +14,13 @@ const PostPreview = (post: Props) => {
   return (
     <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
       <a className="flex flex-col justify-center w-full h-32 px-4 py-2 keep-all post-item group">
-        <h3 className="mb-1 text-xl md:text-2xl group-hover:text-blue-500">
+        <h3 className="text-xl md:text-2xl group-hover:text-blue-500">
           {post.title}
         </h3>
-        <div className="mb-2 text-xs md:text-sm text-gray-600 group-hover:text-blue-500">
+        <p className="mb-2 text-sm md:text-base group-hover:text-blue-500">
+          {post.description}
+        </p>
+        <div className="text-xs text-gray-600 md:text-sm group-hover:text-blue-500">
           <span className="mr-4">
             <DateFormatter dateString={post.date} />
           </span>
@@ -28,9 +31,6 @@ const PostPreview = (post: Props) => {
             </span>
           )}
         </div>
-        <p className="text-sm md:text-base group-hover:text-blue-500">
-          {post.description}
-        </p>
       </a>
     </Link>
   );
