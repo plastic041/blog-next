@@ -2,7 +2,7 @@ import { BLOG_NAME } from '../lib/constants';
 import Container from '../components/container';
 import Head from 'next/head';
 import Header from '../components/header';
-import Layout from '../components/layout';
+import Meta from '../components/meta';
 import Post from '../types/post';
 import PostList from '../components/post-list';
 import React from 'react';
@@ -15,15 +15,14 @@ type Props = {
 const Index = ({ allPosts }: Props) => {
   return (
     <>
-      <Layout>
+      <Meta />
+      <Container>
         <Head>
           <title>{BLOG_NAME}</title>
         </Head>
-        <Container>
-          <Header />
-          <PostList posts={allPosts} />
-        </Container>
-      </Layout>
+        <Header />
+        <PostList posts={allPosts} />
+      </Container>
     </>
   );
 };

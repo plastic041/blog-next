@@ -5,9 +5,7 @@ type PostType = {
   modifiedDate?: string;
   description: string;
   coverImage?: string;
-  ogImage?: {
-    url: string;
-  };
+  ogImage?: string;
   content: string;
 };
 

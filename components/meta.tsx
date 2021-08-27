@@ -6,11 +6,13 @@ import React from 'react';
 type Props = {
   title?: string;
   description?: string;
+  ogImage?: string;
 };
 
 const Meta = (prop: Props) => {
   const title = prop.title ? `${prop.title} | ${BLOG_NAME}` : BLOG_NAME;
   const description = prop.description || '스넙 블로그';
+  const ogImage = prop.ogImage || HOME_OG_IMAGE;
 
   return (
     <Head>
@@ -40,7 +42,7 @@ const Meta = (prop: Props) => {
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={HOME_OG_IMAGE} />
+      <meta property="og:image" content={ogImage} />
       <meta property="og:url" content="https://snubi.netlify.app" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -50,7 +52,7 @@ const Meta = (prop: Props) => {
       <meta name="twitter:creator:id" content="@plastik041" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={HOME_OG_IMAGE} />
+      <meta name="twitter:image" content={ogImage} />
     </Head>
   );
 };

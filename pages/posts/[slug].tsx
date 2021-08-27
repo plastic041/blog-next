@@ -6,7 +6,7 @@ import ErrorPage from 'next/error';
 import GoPostList from '../../components/go-post-list';
 import Head from 'next/head';
 import Header from '../../components/header';
-import Layout from '../../components/layout';
+import Meta from '../../components/meta';
 import PostBody from '../../components/post-body';
 import PostHeader from '../../components/post-header';
 import PostTitle from '../../components/post-title';
@@ -27,40 +27,33 @@ const Post = ({ post }: Props) => {
   }
 
   return (
-    <Layout title={post.title} description={post.description}>
+    <>
+      <Meta
+        title={post.description}
+        description={post.description}
+        ogImage={post.ogImage}
+      />
       <Container>
         <Header />
         {router.isFallback ? (
           <PostTitle title="Loading…" />
         ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | {BLOG_NAME}
-                </title>
-                {post.ogImage && (
-                  <meta property="og:image" content={post.ogImage.url} />
-                )}
-              </Head>
-              <div className="mx-auto md:max-w-2xl">
-                <div className="p-4 mb-2 bg-white ">
-                  <PostHeader
-                    title={post.title}
-                    description={post.description}
-                    coverImage={post.coverImage}
-                    date={post.date}
-                    modifiedDate={post.modifiedDate}
-                  />
-                  <PostBody content={post.content} />
-                </div>
-                <GoPostList />
-              </div>
-            </article>
-          </>
+          <article className="mb-32 mx-auto md:max-w-2xl">
+            <div className="p-4 mb-2 bg-white ">
+              <PostHeader
+                title={post.title}
+                description={post.description}
+                coverImage={post.coverImage}
+                date={post.date}
+                modifiedDate={post.modifiedDate}
+              />
+              <PostBody content={post.content} />
+            </div>
+            <GoPostList />
+          </article>
         )}
       </Container>
-    </Layout>
+    </>
   );
 };
 
