@@ -1,6 +1,4 @@
-import { BLOG_NAME } from '../lib/constants';
 import Container from '../components/container';
-import Head from 'next/head';
 import Header from '../components/header';
 import Meta from '../components/meta';
 import Post from '../types/post';
