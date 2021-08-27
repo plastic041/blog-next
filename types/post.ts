@@ -2,14 +2,15 @@ type PostType = {
   slug: string;
   title: string;
   date: string;
-  modifiedDate?: string;
   description: string;
-  coverImage?: {
+  content: string;
+  ogImage?: string;
+  modifiedDate?: string;
+  coverImage: {
     src: string;
     alt: string;
-  };
-  ogImage: string;
-  content: string;
+    blurDataURL: string;
+  } | null;
 };
 
 export default PostType;

@@ -12,6 +12,7 @@ type Props = {
   coverImage?: {
     src: string;
     alt: string;
+    blurDataURL: string;
   };
   date: string;
   modifiedDate?: string;
@@ -30,7 +31,7 @@ const PostHeader = (post: Props) => {
         <div className="mb-4">
           <PostDescription description={post.description} />
         </div>
-        <div className="text-sm text-right md:text-left text-gray-600">
+        <div className="text-sm text-right text-gray-600 md:text-left">
           <div>
             <DateFormatter dateString={post.date} />
           </div>
@@ -45,7 +46,11 @@ const PostHeader = (post: Props) => {
       <Separator />
       <div className="mb-4 md:mb-8">
         {post.coverImage && (
-          <CoverImage src={post.coverImage.src} alt={post.coverImage.alt} />
+          <CoverImage
+            src={post.coverImage.src}
+            alt={post.coverImage.alt}
+            blurDataURL={post.coverImage.blurDataURL}
+          />
         )}
       </div>
     </div>

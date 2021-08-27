@@ -2,6 +2,6 @@
  * @type {import('next').NextConfig}
  */
 
-const nextConfig = {};
+const { withPlaiceholder } = require('@plaiceholder/next');
 
-module.exports = nextConfig;
+module.exports = withPlaiceholder({});
