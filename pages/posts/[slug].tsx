@@ -38,19 +38,21 @@ const Post = ({ post }: Props) => {
         {router.isFallback ? (
           <PostTitle title="Loading…" />
         ) : (
-          <article className="mb-32 mx-auto md:max-w-2xl">
-            <div className="p-4 mb-2 bg-white ">
-              <PostHeader
-                title={post.title}
-                description={post.description}
-                coverImage={post.coverImage}
-                date={post.date}
-                modifiedDate={post.modifiedDate}
-              />
-              <PostBody content={post.content} />
-            </div>
-            <GoPostList />
-          </article>
+          <main>
+            <article className="mb-32 mx-auto md:max-w-2xl">
+              <div className="p-4 mb-2 bg-white ">
+                <PostHeader
+                  title={post.title}
+                  description={post.description}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  modifiedDate={post.modifiedDate}
+                />
+                <PostBody content={post.content} />
+              </div>
+              <GoPostList />
+            </article>
+          </main>
         )}
       </Container>
     </>

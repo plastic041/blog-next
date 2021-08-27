@@ -4,8 +4,11 @@ type PostType = {
   date: string;
   modifiedDate?: string;
   description: string;
-  coverImage?: string;
-  ogImage?: string;
+  coverImage?: {
+    src: string;
+    alt: string;
+  };
+  ogImage: string;
   content: string;
 };
 

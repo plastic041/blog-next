@@ -9,7 +9,10 @@ import Separator from './section-separator';
 type Props = {
   title: string;
   description: string;
-  coverImage?: string;
+  coverImage?: {
+    src: string;
+    alt: string;
+  };
   date: string;
   modifiedDate?: string;
 };
@@ -43,7 +46,7 @@ const PostHeader = (post: Props) => {
       <Separator />
       <div className="mb-4 md:mb-8">
         {post.coverImage && (
-          <CoverImage title={post.title} src={post.coverImage} />
+          <CoverImage src={post.coverImage.src} alt={post.coverImage.alt} />
         )}
       </div>
     </div>

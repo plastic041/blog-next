@@ -1,7 +1,9 @@
 ---
 title: 'Aseprite 직접 빌드하기'
 description: '오픈소스 프로그램인 Aseprite를 직접 빌드하는 방법'
-coverImage: '/assets/blog/aseprite/aseprite.jpg'
+coverImage:
+  src: '/assets/blog/aseprite/aseprite.jpg'
+  alt: 'Aseprite 프로그램 스크린샷'
 ogImage: '/assets/blog/aseprite/aseprite.jpg'
 date: '2021-08-16T14:00:00.000Z'
 modifiedDate: '2021-08-20T14:00:00.000Z'

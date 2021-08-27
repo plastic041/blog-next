@@ -17,11 +17,10 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Meta />
       <Container>
-        <Head>
-          <title>{BLOG_NAME}</title>
-        </Head>
         <Header />
-        <PostList posts={allPosts} />
+        <main>
+          <PostList posts={allPosts} />
+        </main>
       </Container>
     </>
   );
