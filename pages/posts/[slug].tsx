@@ -1,10 +1,8 @@
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 
-import { BLOG_NAME } from '../../lib/constants';
 import Container from '../../components/container';
 import ErrorPage from 'next/error';
 import GoPostList from '../../components/go-post-list';
-import Head from 'next/head';
 import Header from '../../components/header';
 import Meta from '../../components/meta';
 import PostBody from '../../components/post-body';
