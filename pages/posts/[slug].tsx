@@ -27,7 +27,7 @@ const Post = ({ post }: Props) => {
   return (
     <>
       <Meta
-        title={post.description}
+        title={post.title}
         description={post.description}
         ogImage={post.ogImage}
       />
@@ -37,7 +37,7 @@ const Post = ({ post }: Props) => {
           <PostTitle title="Loading…" />
         ) : (
           <main>
-            <article className="mb-32 mx-auto md:max-w-2xl">
+            <article className="mx-auto mb-32 md:max-w-2xl">
               <div className="p-4 mb-2 bg-white ">
                 <PostHeader
                   title={post.title}

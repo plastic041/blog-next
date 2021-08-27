@@ -11,7 +11,7 @@ type Props = {
 
 const Meta = (prop: Props) => {
   const title = prop.title ? `${prop.title} | ${BLOG_NAME}` : BLOG_NAME;
-  const description = prop.description || '스넙 블로그';
+  const description = prop.description || BLOG_NAME;
   const ogImage = prop.ogImage || HOME_OG_IMAGE;
 
   return (
@@ -53,6 +53,7 @@ const Meta = (prop: Props) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <title>{title}</title>
     </Head>
   );
 };
