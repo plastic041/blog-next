@@ -30,9 +30,8 @@ const PostHeader = (post: Props) => {
         <div className="mb-4">
           <PostDescription description={post.description} />
         </div>
-        <div className="text-sm text-right md:text-left">
+        <div className="text-sm text-right md:text-left text-gray-600">
           <div>
-            {'작성: '}
             <DateFormatter dateString={post.date} />
           </div>
           {post.modifiedDate && (
