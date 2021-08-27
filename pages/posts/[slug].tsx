@@ -10,12 +10,12 @@ import PostHeader from '../../components/post-header';
 import PostTitle from '../../components/post-title';
 import PostType from '../../types/post';
 import React from 'react';
+import { getPlaiceholder } from 'plaiceholder';
 import markdownToHtml from '../../lib/markdownToHtml';
 import { useRouter } from 'next/router';
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
 };
 
 const Post = ({ post }: Props) => {
@@ -37,12 +37,12 @@ const Post = ({ post }: Props) => {
           <PostTitle title="Loading…" />
         ) : (
           <main>
-            <article className="mb-32 mx-auto md:max-w-2xl">
+            <article className="mx-auto mb-32 md:max-w-2xl">
               <div className="p-4 mb-2 bg-white ">
                 <PostHeader
                   title={post.title}
                   description={post.description}
-                  coverImage={post.coverImage}
+                  coverImage={post.coverImage || undefined}
                   date={post.date}
                   modifiedDate={post.modifiedDate}
                 />
@@ -66,19 +66,14 @@ type Params = {
 };
 
 export async function getStaticProps(context: Params) {
-  const post = getPostBySlug(context.params.slug, [
-    'title',
-    'description',
-    'date',
-    'modifiedDate',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
-  ]);
+  const post = getPostBySlug(context.params.slug);
 
   const content = await markdownToHtml(post.content || '');
+
+  if (post.coverImage) {
+    const placeholder = await getPlaiceholder(post.coverImage.src);
+    post.coverImage = { ...post.coverImage, blurDataURL: placeholder.base64 };
+  }
 
   return {
     props: {

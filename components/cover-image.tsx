@@ -4,9 +4,10 @@ import React from 'react';
 type Props = {
   src: string;
   alt: string;
+  blurDataURL: string;
 };
 
-const CoverImage = ({ src, alt }: Props) => {
+const CoverImage = ({ src, alt, blurDataURL }: Props) => {
   return (
     <a href={src} target="_blank" rel="noreferrer">
       <Image
@@ -14,8 +15,10 @@ const CoverImage = ({ src, alt }: Props) => {
         src={src}
         objectFit="contain"
         alt={alt}
-        width={1920}
-        height={1054}
+        width={16}
+        height={9}
+        blurDataURL={blurDataURL}
+        placeholder="blur"
       />
     </a>
   );
