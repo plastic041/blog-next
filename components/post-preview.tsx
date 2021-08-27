@@ -17,7 +17,10 @@ const PostPreview = (post: Props) => {
         <h3 className="mb-1 text-xl md:text-2xl group-hover:text-blue-500">
           {post.title}
         </h3>
-        <div className="mb-2 text-xs md:text-sm text-gray-600 group-hover:text-blue-500">
+        <p className="text-sm md:text-base group-hover:text-blue-500">
+          {post.description}
+        </p>
+        <div className="mb-2 text-xs text-gray-600 md:text-sm group-hover:text-blue-500">
           <span className="mr-4">
             <DateFormatter dateString={post.date} />
           </span>
@@ -28,9 +31,6 @@ const PostPreview = (post: Props) => {
             </span>
           )}
         </div>
-        <p className="text-sm md:text-base group-hover:text-blue-500">
-          {post.description}
-        </p>
       </a>
     </Link>
   );
