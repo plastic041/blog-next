@@ -8,11 +8,16 @@ type Props = {
 
 const CoverImage = ({ src, alt }: Props) => {
   return (
-    <div className="relative h-40 mx-auto md:h-96">
-      <a href={src} target="_blank" rel="noreferrer">
-        <Image layout="fill" src={src} objectFit="contain" alt={alt} />
-      </a>
-    </div>
+    <a href={src} target="_blank" rel="noreferrer">
+      <Image
+        layout="responsive"
+        src={src}
+        objectFit="contain"
+        alt={alt}
+        width={1920}
+        height={1054}
+      />
+    </a>
   );
 };
 
