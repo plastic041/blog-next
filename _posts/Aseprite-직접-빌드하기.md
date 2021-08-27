@@ -11,7 +11,7 @@ modifiedDate: '2021-08-20T14:00:00.000Z'
 
 참조 링크: [https://github.com/aseprite/aseprite/blob/main/INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md)
 
-[**Aeprite**](https://www.aseprite.org)는 픽셀 아트에 최적화된 오픈 소스 프로그램입니다. [스팀](https://store.steampowered.com/app/431730/Aseprite)에서 20,500원에 구매할 수 있습니다. 2001년 ASE(Allegro Sprite Editor)라는 이름으로 공개되어 20년 동안 오픈 소스로 개발되고 있습니다. 오픈 소스 프로그램이므로 직접 빌드해서 사용할 수 있으며 빌드한 Aseprite는 판매되는 Aseprite와 똑같이 개인적/상업적 용도 모두에 사용할 수 있습니다([Aseprite fnq](https://www.aseprite.org/faq/#can-i-sell-graphics-created-with-aseprite)). 다만 빌드한 Asprite를 재배포(redistribute)하는 것은 금지됩니다.
+[**Aeprite**](https://www.aseprite.org)는 픽셀 아트를 그리는 프로그램으로, [스팀](https://store.steampowered.com/app/431730/Aseprite)에서 20,500원에 판매하고 있습니다. 2001년 ASE(Allegro Sprite Editor)라는 이름으로 공개되어 20년 동안 오픈 소스로 개발되고 있습니다. 오픈 소스 프로그램이므로 직접 빌드해서 사용할 수 있으며 빌드한 Aseprite는 판매되는 Aseprite와 똑같이 개인적/상업적 용도 모두에 사용할 수 있습니다([Aseprite fnq](https://www.aseprite.org/faq/#can-i-sell-graphics-created-with-aseprite)). 빌드한 Asprite를 재배포(redistribute)하는 것만 금지됩니다.
 
 이 글에서는 윈도우10에서 Aseprite를 빌드하는 방법에 대해 다룹니다. 맥과 리눅스는 링크를 참조하시기 바랍니다.
 
