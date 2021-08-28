@@ -15,8 +15,8 @@ const CoverImage = ({ src, alt, blurDataURL }: Props) => {
         src={src}
         objectFit="contain"
         alt={alt}
-        width={16}
-        height={9}
+        width={640}
+        height={360}
         blurDataURL={blurDataURL}
         placeholder="blur"
       />

@@ -4,13 +4,13 @@ type PostType = {
   date: string;
   description: string;
   content: string;
-  ogImage?: string;
-  modifiedDate?: string;
+  ogImage: string;
+  modifiedDate: string;
   coverImage: {
     src: string;
     alt: string;
     blurDataURL: string;
-  } | null;
+  };
 };
 
 export default PostType;

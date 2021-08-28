@@ -42,7 +42,7 @@ const Post = ({ post }: Props) => {
                 <PostHeader
                   title={post.title}
                   description={post.description}
-                  coverImage={post.coverImage || undefined}
+                  coverImage={post.coverImage}
                   date={post.date}
                   modifiedDate={post.modifiedDate}
                 />
@@ -65,10 +65,24 @@ type Params = {
   };
 };
 
-export async function getStaticProps(context: Params) {
-  const post = getPostBySlug(context.params.slug);
+type PostUpdate = {
+  [p in keyof PostType]?: PostType[p];
+};
 
-  const content = await markdownToHtml(post.content || '');
+export async function getStaticProps(context: Params) {
+  const post: PostUpdate = getPostBySlug(context.params.slug, [
+    'title',
+    'description',
+    'date',
+    'modifiedDate',
+    'slug',
+    'author',
+    'content',
+    'ogImage',
+    'coverImage',
+  ]);
+
+  const content = await markdownToHtml(post.content || 'No content');
 
   if (post.coverImage) {
     const placeholder = await getPlaiceholder(post.coverImage.src);

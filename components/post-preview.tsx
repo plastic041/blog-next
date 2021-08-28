@@ -3,10 +3,10 @@ import Link from 'next/link';
 import React from 'react';
 
 type Props = {
+  slug: string;
   title: string;
   date: string;
   modifiedDate?: string;
-  slug: string;
   description?: string;
 };
 
