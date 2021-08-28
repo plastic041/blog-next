@@ -11,15 +11,18 @@
     "classnames": "2.3.1",
     "date-fns": "2.21.3",
     "gray-matter": "4.0.3",
+    "hast-util-has-property": "^2.0.0",
     "next": "latest",
     "next-plausible": "^2.1.1",
     "plaiceholder": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remark": "13.0.0",
-    "remark-html": "13.0.1",
+    "rehype-stringify": "^9.0.1",
+    "remark-parse": "^10.0.0",
+    "remark-rehype": "^9.0.0",
     "sharp": "^0.29.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "unified": "^10.1.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.0",
