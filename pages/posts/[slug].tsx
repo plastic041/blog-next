@@ -65,8 +65,12 @@ type Params = {
   };
 };
 
+type PostUpdate = {
+  [p in keyof PostType]?: PostType[p];
+};
+
 export async function getStaticProps(context: Params) {
-  const post = getPostBySlug(context.params.slug, [
+  const post: PostUpdate = getPostBySlug(context.params.slug, [
     'title',
     'description',
     'date',
@@ -76,9 +80,9 @@ export async function getStaticProps(context: Params) {
     'content',
     'ogImage',
     'coverImage',
-  ]) as PostType;
+  ]);
 
-  const content = await markdownToHtml(post.content);
+  const content = await markdownToHtml(post.content || 'No content');
 
   if (post.coverImage) {
     const placeholder = await getPlaiceholder(post.coverImage.src);
